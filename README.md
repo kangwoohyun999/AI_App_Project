@@ -5,7 +5,7 @@
 
 ## 📌 라이브러리 설치
 
-* cd AIApp
+* cd Today_Condition
 * npm install @react-navigation/native @react-navigation/stack
 * npm install react-native-chart-kit
 * npm install @react-native-async-storage/async-storage
