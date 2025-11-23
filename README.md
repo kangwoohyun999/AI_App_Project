@@ -6,17 +6,11 @@
 
 * cd AIApp
 * npm install @react-navigation/native @react-navigation/stack
-
-npm install react-native-chart-kit
-
-npm install @react-native-async-storage/async-storage
-
-npm install react-native-svg
-
-npm install expo-font
-
-npm install expo-linear-gradient
-
+* npm install react-native-chart-kit
+* npm install @react-native-async-storage/async-storage
+* npm install react-native-svg
+* npm install expo-font
+* npm install expo-linear-gradient
 
 ## 📌 3. Expo 실행
-npx expo start
+* npx expo start
