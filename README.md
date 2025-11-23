@@ -1,4 +1,4 @@
-## 인공지능앱개발 조별과제
+## 인공지능앱개발 조별과제(수정중 실행 하지마세요.)
 
 ## 📌 프로젝트 생성
 * npx create-expo-app Today_Condition
