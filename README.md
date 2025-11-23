@@ -4,8 +4,8 @@
 * npx create-expo-app Today_Condition
 
 ## 📌 라이브러리 설치
-1. cd Today_Condition
-2. npm install @react-navigation/native @react-navigation/stack
+## 1. ### cd Today_Condition
+## 2. ### npm install @react-navigation/native @react-navigation/stack
 3. npm install react-native-chart-kit
 4. npm install @react-native-async-storage/async-storage
 5. npm install react-native-svg
