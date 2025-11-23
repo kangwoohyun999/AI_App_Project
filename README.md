@@ -1,7 +1,7 @@
 ## 인공지능앱개발 조별과제
 
 ## 📌 프로젝트 생성
-* npx create-expo-app AIApp
+* npx create-expo-app Today_Condition
 
 ## 📌 라이브러리 설치
 
