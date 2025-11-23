@@ -5,7 +5,6 @@
 ## 📌 2. 필요 라이브러리 설치
 
 * cd AIApp
-
 * npm install @react-navigation/native @react-navigation/stack
 
 npm install react-native-chart-kit
