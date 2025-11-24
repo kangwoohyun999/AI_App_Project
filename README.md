@@ -11,7 +11,7 @@
 5. npm install react-native-svg
 6. npm install expo-font
 7. npm install expo-linear-gradient
-8. Today_Condition\app 폴더 제거
+8. Today_Condition/app 폴더 제거
 9. 나머지 파일 Today_Condition 폴더 안에 넣기
 
 ## 📌 Expo 실행
