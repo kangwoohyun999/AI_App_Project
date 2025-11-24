@@ -4,8 +4,8 @@ import PieChartComponent from '../components/PieChartComponent';
 import { getEntries } from '../utils/storage';
 
 export default function HomeScreen({ navigation }) {
-  const [positiveRatio, setPositiveRatio] = useState(0.6);
-  const [negativeRatio, setNegativeRatio] = useState(0.4);
+  const [positiveRatio, setPositiveRatio] = useState(0.0);
+  const [negativeRatio, setNegativeRatio] = useState(0.0);
 
   useEffect(() => {
     const unsubscribe = navigation.addListener('focus', async () => {
@@ -14,8 +14,8 @@ export default function HomeScreen({ navigation }) {
       const negScore = entries.reduce((acc, e) => acc + ((e.sentiment.label === 'negative') ? 1 : 0), 0);
       const total = posScore + negScore;
       if (total === 0) {
-        setPositiveRatio(0.6);
-        setNegativeRatio(0.4);
+        setPositiveRatio(0.0);
+        setNegativeRatio(0.0);
       } else {
         setPositiveRatio(posScore / total);
         setNegativeRatio(negScore / total);
