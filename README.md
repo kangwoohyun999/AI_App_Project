@@ -15,6 +15,9 @@
 ## 📌 Expo 실행
 * npx expo start
 
+# Today_Condition\app 폴더 제거
+# 나머지 파일 Today_Condition 폴더 안에 넣기
+
 ## 🔧 설치/주의사항
 * react-native-chart-kit와 react-native-svg, @react-native-async-storage/async-storage가 필요합니다. (이전 package.json에 포함)
 * 사전(WORD_DICT)은 utils/wordDictionary.js에서 조절하세요. 프로젝트 초기에는 적은 수의 키워드만 넣고 테스트 후 확장 권장.
