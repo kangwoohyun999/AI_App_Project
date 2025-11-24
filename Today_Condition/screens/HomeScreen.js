@@ -28,7 +28,7 @@ export default function HomeScreen({ navigation }) {
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>누적 상태</Text>
       <PieChartComponent positive={positiveRatio} negative={negativeRatio} />
-      <Text style={styles.ratioText}>{Math.round(positiveRatio*100)} : {Math.round(negativeRatio*100)}</Text>
+      <Text style={styles.ratioText}>{Math.round(negativeRatio*100)} : {Math.round(positiveRatio*100)}</Text>
 
       <View style={styles.buttonRow}>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Graph')}>
