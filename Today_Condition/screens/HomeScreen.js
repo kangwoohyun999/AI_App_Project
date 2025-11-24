@@ -42,7 +42,7 @@ export default function HomeScreen({ navigation }) {
       <View style={styles.chatPrompt}>
         <Text style={styles.promptText}>안녕하세요. 오늘은 어떤 하루였나요?</Text>
         <TouchableOpacity style={styles.chatInputButton} onPress={() => navigation.navigate('Chat')}>
-          <Text style={styles.chatInputText}>채팅치는 곳</Text>
+          <Text style={styles.chatInputText}>눌러서 채팅하기</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
