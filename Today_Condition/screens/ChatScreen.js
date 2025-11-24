@@ -67,13 +67,13 @@ export default function ChatScreen({ navigation }) {
       </View>
 
       <ScrollView style={styles.chatArea}>
-        {todayEntries.map(e =>
-          <View key={e.id} style={styles.entryBlock}>
-            <Text style={styles.entryTime}>{new Date(e.date).toLocaleTimeString()}</Text>
-            <Text style={styles.entryText}>{e.text}</Text>
-            <Text style={styles.entryMeta}>키워드: {e.keywords.join(', ') || '없음'} | 감정: {e.sentiment.label}</Text>
-          </View>
-        )}
+        // {todayEntries.map(e =>
+        //   <View key={e.id} style={styles.entryBlock}>
+        //     <Text style={styles.entryTime}>{new Date(e.date).toLocaleTimeString()}</Text>
+        //     <Text style={styles.entryText}>{e.text}</Text>
+        //     <Text style={styles.entryMeta}>키워드: {e.keywords.join(', ') || '없음'} | 감정: {e.sentiment.label}</Text>
+        //   </View>
+        // )}
         {messages.map(m => <ChatBubble key={m.id} text={m.text} isUser={m.isUser} date={new Date(m.date).toLocaleTimeString()} />)}
       </ScrollView>
 
