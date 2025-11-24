@@ -51,8 +51,8 @@ export default function HomeScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: { flex:1, backgroundColor:'#0f0b12', padding:20, alignItems:'center' },
-  title: { color:'#fff', fontSize:26, marginTop:10 },
-  ratioText: { color:'#fff', fontSize:28, marginVertical:10 },
+  title: { color:'#fff', fontSize:40, marginTop:10 },
+  ratioText: { color:'#fff', fontSize:26, marginVertical:10 },
   buttonRow: { flexDirection:'row', justifyContent:'space-between', width:'100%', marginTop:12 },
   button: { flex:1, backgroundColor:'#2a2430', padding:14, marginHorizontal:6, borderRadius:10, alignItems:'center' },
   buttonText: { color:'#fff' },
