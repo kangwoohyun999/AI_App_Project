@@ -4,7 +4,7 @@ import { PieChart } from 'react-native-chart-kit';
 
 const screenWidth = Dimensions.get('window').width;
 
-export default function PieChartComponent({ positive = 0.6, negative = 0.4 }) {
+export default function PieChartComponent({ positive = 0.0, negative = 0.0 }) {
   const pos = Math.round(positive * 100);
   const neg = Math.round(negative * 100);
   const data = [
