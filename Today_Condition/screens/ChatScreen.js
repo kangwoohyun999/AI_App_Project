@@ -55,7 +55,7 @@ export default function ChatScreen({ navigation }) {
     if (!entry || !entry.sentiment) return '작성해주셔서 감사합니다.';
     if (entry.sentiment.label === 'positive') return '좋은 일이 많았나 보네요. 계속 잘 챙기세요!';
     if (entry.sentiment.label === 'negative') return '오늘 힘든 날이었군요. 괜찮으실까요? 필요하면 조금 더 적어보세요.';
-    return '중립적인 하루였네요. 더 이야기해주셔도 좋아요.';
+    return '평범한 하루였네요. 더 이야기해주셔도 좋아요.';
   };
 
   return (
