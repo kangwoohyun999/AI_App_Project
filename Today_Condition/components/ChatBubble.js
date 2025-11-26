@@ -5,7 +5,7 @@ export default function ChatBubble({ text, isUser = false, date }) {
   return (
     <View style={[styles.container, isUser ? styles.user : styles.bot]}>
       <Text style={[styles.text, isUser ? styles.userText : styles.botText]}>{text}</Text>
-      {date && <Text style={styles.date}>{date}</Text>}
+      // {date && <Text style={styles.date}>{date}</Text>}
     </View>
   );
 }
