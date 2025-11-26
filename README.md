@@ -4,6 +4,9 @@
 https://nodejs.org/ko/download/
 접속 후 20.xx.xx 버전 선택 후 다운로드
 
+## npm 다운로드
+터미널창에서 npm install
+
 ## 📌 프로젝트 생성
 * npx create-expo-app Today_Condition
 
