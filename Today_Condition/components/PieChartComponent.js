@@ -25,7 +25,7 @@ export default function PieChartComponent({ positive = 0.0, negative = 0.0 }) {
         accessor="population"
         backgroundColor="transparent"
         paddingLeft="0"
-        center={[165, 0]}
+        center={[screenWidth/5.8, 0]}
         hasLegend={false}
       />
     </View>
