@@ -9,17 +9,18 @@ https://nodejs.org/ko/download/
 
 ## 📌 프로젝트 생성
 * npx create-expo-app Today_Condition
+* cd Today_Condition
+* Today_Condition/app 폴더 제거
+* 나머지 파일 Today_Condition 폴더 안에 넣기
 
 ## 📌 라이브러리 설치
-1. cd Today_Condition
-2. npm install @react-navigation/native @react-navigation/stack
-3. npm install react-native-chart-kit
-4. npm install @react-native-async-storage/async-storage
-5. npm install react-native-svg
-6. npm install expo-font
-7. npm install expo-linear-gradient
-8. Today_Condition/app 폴더 제거
-9. 나머지 파일 Today_Condition 폴더 안에 넣기
+* npm install @react-navigation/native @react-navigation/stack
+* npm install react-native-chart-kit
+* npm install @react-native-async-storage/async-storage
+* npm install react-native-svg
+* npm install expo-font
+* npm install expo-linear-gradient
+
 
 ## 📌 Expo 실행
 * npx expo start
