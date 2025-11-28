@@ -80,7 +80,7 @@ export default function ChatScreen({ navigation }) {
           multiline
         />
         <TouchableOpacity style={styles.sendBtn} onPress={handleSend}>
-          <Text style={{ color:'#fff' }}>저장</Text>
+          <Text style={{ color:'#fff' }}>전송</Text>
         </TouchableOpacity>
       </View>
 
