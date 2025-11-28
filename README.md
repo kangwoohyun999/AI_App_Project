@@ -13,7 +13,7 @@ https://nodejs.org/ko/download/
 * Today_Condition/app 폴더 제거
 * 나머지 파일 Today_Condition 폴더 안에 넣기
 
-## 📌 라이브러리 설치
+## 📌 라이브러리 설치 (처음 한번만 하면 됨)
 * npm install @react-navigation/native @react-navigation/stack
 * npm install react-native-chart-kit
 * npm install @react-native-async-storage/async-storage
