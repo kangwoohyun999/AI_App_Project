@@ -13,7 +13,7 @@ https://nodejs.org/ko/download/
 
 ## 📌 프로젝트 생성
 * npx create-expo-app Today_Condition
-* Today_Condition/app 폴더 제거
+* Today_Condition/app 폴더 제거(수정중)
 * 나머지 파일 Today_Condition 폴더 안에 넣기
 
 ## 📌 라이브러리 설치 (생성한 폴더로 가서 설치)
