@@ -24,6 +24,8 @@ https://nodejs.org/ko/download/
 * npm install react-native-svg
 * npm install expo-font
 * npm install expo-linear-gradient
+* npm install victory
+* npx expo install react-native-svg
 
 
 ## 📌 Expo 실행
