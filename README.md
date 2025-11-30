@@ -21,11 +21,12 @@ https://nodejs.org/ko/download/
 * npm install expo-router (수정중)
 * npm install react-native-chart-kit
 * npm install @react-native-async-storage/async-storage
-* npm install expo-font
-* npm install expo-linear-gradient
-* npm install victory
+* npx expo install expo-font
 * npx expo install react-native-svg
-
+* npx expo install expo-linear-gradient
+* npm install victory
+* npm install victory-native
+* npx expo install react-native-svg
 
 ## 📌 Expo 실행
 * npx expo start
