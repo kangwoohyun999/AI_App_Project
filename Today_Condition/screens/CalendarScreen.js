@@ -69,11 +69,15 @@ export default function CalendarScreen({ navigation }) {
               key={idx}
               style={[
                 styles.dayBox,
-                { backgroundColor: bg },
+                {
+                  backgroundColor: "#ffffff",
+                  borderColor: bg,
+                  borderWidth: mood ? 2 : 1,
+                },
                 isToday && styles.todayBorder,
               ]}
             >
-              <Text style={styles.dayNumber}>{d}</Text>
+              <Text style={[styles.dayNumber, { color: bg }]}>{d}</Text>
             </View>
           );
         })}
@@ -84,52 +88,79 @@ export default function CalendarScreen({ navigation }) {
         style={styles.backBtn}
         onPress={() => navigation.goBack()}
       >
-        <Text style={{ color: "#fff" }}>뒤로가기</Text>
+        <Text style={{ color: "#333", fontWeight: "600" }}>뒤로가기</Text>
       </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0f0b12", padding: 20 },
-  title: { color: "#fff", fontSize: 24, marginBottom: 20, textAlign: "center" },
+  container: { flex: 1, backgroundColor: "#f5f5f5", padding: 20 },
+
+  title: {
+    color: "#333",
+    fontSize: 24,
+    marginBottom: 20,
+    textAlign: "center",
+    fontWeight: "700",
+  },
 
   weekRow: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 4,
+    marginBottom: 6,
+    paddingHorizontal: 4,
   },
-  weekText: { color: "#bbb", width: "14.2%", textAlign: "center" },
-
-  grid: { flexDirection: "row", flexWrap: "wrap" },
-
-  dayEmpty: {
+  weekText: {
+    color: "#666",
     width: "14.2%",
-    aspectRatio: 1,
-    marginVertical: 4,
+    textAlign: "center",
+    fontSize: 14,
+    fontWeight: "600",
   },
+
+  grid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    backgroundColor: "#ffffff",
+    paddingVertical: 12,
+    paddingHorizontal: 4,
+    borderRadius: 16,
+    shadowColor: "#000",
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 3,
+  },
+
+  dayEmpty: { width: "14.2%", aspectRatio: 1, marginVertical: 6 },
 
   dayBox: {
     width: "14.2%",
     aspectRatio: 1,
-    marginVertical: 4,
-    borderRadius: 10,
-    justifyContent: "flex-start",
-    padding: 6,
+    marginVertical: 6,
+    borderRadius: 12,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#ffffff", // ← 흰색 확정
   },
 
-  dayNumber: { color: "#fff", fontSize: 14 },
-
-  todayBorder: {
-    borderWidth: 2,
-    borderColor: "#fff",
+  dayNumber: {
+    fontSize: 14,
+    fontWeight: "700",
   },
+
+  todayBorder: { borderWidth: 2, borderColor: "#4C6EF5" },
 
   backBtn: {
     marginTop: 20,
-    backgroundColor: "#2a2430",
+    backgroundColor: "#ffffff",
     padding: 14,
-    borderRadius: 10,
+    borderRadius: 14,
     alignItems: "center",
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    shadowOffset: { width: 0, height: 3 },
   },
 });

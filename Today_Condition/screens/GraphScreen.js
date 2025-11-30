@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   SafeAreaView,
+  View,
   Text,
   TouchableOpacity,
   StyleSheet,
@@ -42,7 +43,7 @@ export default function GraphScreen({ navigation }) {
       word: w,
       color,
       data: (dataMap[w] || []).map((v, idx) => ({
-        x: dates[idx]?.slice(5),
+        x: dates[idx] ? dates[idx].slice(5) : "",
         y: v,
       })),
     };
@@ -53,59 +54,60 @@ export default function GraphScreen({ navigation }) {
       <Text style={styles.title}>단어별 중요도·빈도 그래프 (최근 14일)</Text>
 
       <ScrollView horizontal>
-        <VictoryChart
-          width={Math.max(400, dates.length * 50)}
-          theme={VictoryTheme.material}
-          domainPadding={{ x: 20, y: 20 }}
-          style={{
-            parent: {
-              backgroundColor: "#0f0b12",
-            },
-          }}
-        >
-          <VictoryAxis
-            style={{
-              tickLabels: { fill: "#fff" },
-              axis: { stroke: "#fff" },
-            }}
-          />
-          <VictoryAxis
-            dependentAxis
-            style={{
-              tickLabels: { fill: "#fff" },
-              axis: { stroke: "#fff" },
-            }}
-          />
-
-          {datasets.map((ds, i) => (
-            <VictoryLine
-              key={i}
-              data={ds.data}
+        <View style={styles.chartCard}>
+          <VictoryChart
+            width={Math.max(400, (dates?.length || 0) * 50)}
+            theme={VictoryTheme.material}
+            domainPadding={{ x: 20, y: 20 }}
+            style={{ parent: { backgroundColor: "#ffffff" } }}
+          >
+            <VictoryAxis
               style={{
-                data: { stroke: ds.color, strokeWidth: 3 },
+                tickLabels: { fill: "#555" },
+                axis: { stroke: "#ccc" },
               }}
             />
-          ))}
 
-          <VictoryLegend
-            x={10}
-            y={10}
-            orientation="horizontal"
-            gutter={20}
-            style={{ labels: { fill: "#fff" } }}
-            data={datasets.map((ds) => ({
-              name: ds.word,
-              symbol: { fill: ds.color },
-            }))}
-          />
-        </VictoryChart>
+            <VictoryAxis
+              dependentAxis
+              style={{
+                tickLabels: { fill: "#555" },
+                axis: { stroke: "#ccc" },
+              }}
+            />
+
+            {datasets.map((ds, i) => (
+              <VictoryLine
+                key={i}
+                data={ds.data}
+                style={{
+                  data: { stroke: ds.color, strokeWidth: 3 },
+                }}
+              />
+            ))}
+
+            {datasets.length > 0 && (
+              <VictoryLegend
+                x={10}
+                y={10}
+                orientation="horizontal"
+                gutter={20}
+                style={{ labels: { fill: "#555" } }}
+                data={datasets.map((ds) => ({
+                  name: ds.word,
+                  symbol: { fill: ds.color },
+                }))}
+              />
+            )}
+          </VictoryChart>
+        </View>
       </ScrollView>
 
       <TouchableOpacity
         style={styles.backBtn}
         onPress={() => navigation.goBack()}
       >
-        <Text style={{ color: "#fff" }}>뒤로</Text>
+        <Text style={{ color: "#333", fontWeight: "600" }}>뒤로</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -114,22 +116,43 @@ export default function GraphScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f0b12",
-    padding: 12,
+    backgroundColor: "#f5f5f5",
+    padding: 16,
   },
+
   title: {
-    color: "#fff",
-    fontSize: 18,
-    marginBottom: 12,
+    color: "#333",
+    fontSize: 20,
+    fontWeight: "700",
+    marginBottom: 16,
     textAlign: "center",
   },
+
+  chartCard: {
+    backgroundColor: "#ffffff",
+    borderRadius: 16,
+    paddingVertical: 16,
+    paddingHorizontal: 8,
+    shadowColor: "#000",
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 3,
+    marginBottom: 20,
+  },
+
   backBtn: {
-    marginTop: 12,
-    backgroundColor: "#2a2430",
-    padding: 12,
-    borderRadius: 8,
+    marginTop: 20,
+    backgroundColor: "#ffffff",
+    padding: 14,
+    borderRadius: 14,
     width: "90%",
     alignSelf: "center",
     alignItems: "center",
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 2,
   },
 });

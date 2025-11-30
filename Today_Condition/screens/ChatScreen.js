@@ -143,52 +143,84 @@ export default function ChatScreen({ navigation }) {
 }
 
 const styles = {
-  container: { flex: 1, backgroundColor: "#0f0b12", padding: 12 },
+  container: {
+    flex: 1,
+    backgroundColor: "#f5f5f5",
+    padding: 0,
+  },
+
+  // 날짜 바
   dateRow: {
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 8,
+    backgroundColor: "#ffffff",
+    paddingVertical: 14,
+    paddingHorizontal: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: "#e6e6e6",
   },
   dateBtn: {
-    padding: 8,
-    backgroundColor: "#2a2430",
-    borderRadius: 8,
-    marginHorizontal: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
   },
-  dateBtnText: { color: "#fff", fontSize: 16 },
-  dateText: { color: "#fff", fontSize: 16 },
-  chatArea: { flex: 1, marginVertical: 8 },
-  entryBlock: {
-    backgroundColor: "#1b1620",
-    padding: 10,
-    borderRadius: 8,
-    marginBottom: 8,
+  dateBtnText: {
+    color: "#333",
+    fontSize: 22,
+    fontWeight: "600",
   },
-  entryTime: { color: "#ddd", fontSize: 12, marginBottom: 6 },
-  entryText: { color: "#fff", fontSize: 14 },
-  entryMeta: { color: "#bbb", fontSize: 12, marginTop: 6 },
-  inputRow: { flexDirection: "row", alignItems: "center", marginTop: 8 },
+  dateText: {
+    color: "#333",
+    fontSize: 16,
+    fontWeight: "600",
+  },
+
+  // 메시지 목록
+  messageList: {
+    flex: 1,
+    paddingHorizontal: 14,
+    paddingTop: 10,
+  },
+
+  // 입력 영역
+  inputRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#ffffff",
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    borderTopWidth: 1,
+    borderTopColor: "#e6e6e6",
+  },
+
   input: {
     flex: 1,
-    backgroundColor: "#1c1720",
-    color: "#fff",
-    padding: 10,
-    borderRadius: 8,
-    maxHeight: 120,
-  },
-  sendBtn: {
-    marginLeft: 8,
-    paddingVertical: 12,
+    backgroundColor: "#f1f2f6",
+    color: "#000",
     paddingHorizontal: 14,
-    backgroundColor: "#6b5bff",
-    borderRadius: 8,
+    paddingVertical: 10,
+    borderRadius: 20,
+    fontSize: 15,
+    maxHeight: 130,
   },
+
+  sendBtn: {
+    marginLeft: 10,
+    backgroundColor: "#4C6EF5",
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: 20,
+  },
+
+  // 뒤로가기 버튼
   backBtn: {
-    marginTop: 8,
-    backgroundColor: "#2a2430",
-    padding: 10,
+    position: "absolute",
+    top: 55,
+    left: 15,
+    backgroundColor: "rgba(0,0,0,0.5)",
+    paddingVertical: 6,
+    paddingHorizontal: 10,
     borderRadius: 8,
-    alignItems: "center",
+    zIndex: 50,
   },
 };

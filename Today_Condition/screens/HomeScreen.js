@@ -87,27 +87,56 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0f0b12",
+    backgroundColor: "#f5f5f5",
     padding: 20,
     alignItems: "center",
   },
-  title: { color: "#fff", fontSize: 40, marginTop: 10 },
-  ratioText: { color: "#fff", fontSize: 26, marginVertical: 10 },
+
+  // 타이틀
+  title: {
+    color: "#333",
+    fontSize: 28,
+    fontWeight: "700",
+    marginTop: 10,
+  },
+
+  // 긍정/부정 비율 텍스트
+  ratioText: {
+    color: "#555",
+    fontSize: 18,
+    marginVertical: 12,
+  },
+
+  // 버튼 2개 가로 배열
   buttonRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
-    marginTop: 12,
+    marginTop: 20,
   },
+
+  // 흰색 카드 버튼
   button: {
     flex: 1,
-    backgroundColor: "#2a2430",
-    padding: 14,
+    backgroundColor: "#ffffff",
+    padding: 16,
     marginHorizontal: 6,
-    borderRadius: 10,
+    borderRadius: 14,
     alignItems: "center",
+    shadowColor: "#000",
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 3,
   },
-  buttonText: { color: "#fff" },
+
+  buttonText: {
+    color: "#333",
+    fontSize: 16,
+    fontWeight: "600",
+  },
+
+  // 하단 채팅/캘린더 영역
   chatPrompt: {
     position: "absolute",
     bottom: 40,
@@ -115,22 +144,42 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 14,
   },
-  promptText: { color: "#fff", fontSize: 16, marginBottom: 10 },
+
+  promptText: {
+    color: "#444",
+    fontSize: 16,
+    marginBottom: 6,
+  },
+
+  // 메인 블루 버튼
+  calendarBtn: {
+    width: "90%",
+    backgroundColor: "#4C6EF5",
+    padding: 16,
+    borderRadius: 20,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOpacity: 0.12,
+    shadowRadius: 7,
+    shadowOffset: { width: 0, height: 3 },
+  },
+
+  // 채팅 버튼 (화이트 카드 느낌)
   chatInputButton: {
     width: "90%",
-    backgroundColor: "#2a2430",
-    padding: 14,
-    borderRadius: 12,
+    backgroundColor: "#ffffff",
+    padding: 16,
+    borderRadius: 20,
     alignItems: "center",
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 3 },
   },
-  chatInputText: { color: "#fff", fontSize: 16 },
 
-  calendarBtn: {
-    marginTop: 20,
-    width: "90%", // ⭐ 추가 (채팅 버튼과 동일)
-    backgroundColor: "#2a2430",
-    padding: 14,
-    borderRadius: 12,
-    alignItems: "center",
+  chatInputText: {
+    color: "#333",
+    fontSize: 16,
+    fontWeight: "600",
   },
 });
