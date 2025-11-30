@@ -19,10 +19,8 @@ https://nodejs.org/ko/download/
 ## 📌 라이브러리 설치 (생성한 폴더로 가서 설치)
 주소 예시 ) C:\Users\user\Downloads\Today_Condition\Today_Condition>
 * npm install expo-router
-* npm install @react-navigation/native @react-navigation/stack
 * npm install react-native-chart-kit
 * npm install @react-native-async-storage/async-storage
-* npm install react-native-svg
 * npm install expo-font
 * npm install expo-linear-gradient
 * npm install victory
