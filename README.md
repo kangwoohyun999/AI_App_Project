@@ -13,12 +13,12 @@ https://nodejs.org/ko/download/
 
 ## 📌 프로젝트 생성
 * npx create-expo-app Today_Condition
-* Today_Condition/app 폴더 제거(수정중)
+* Today_Condition/app 폴더 제거 (수정중)
 * 나머지 파일 Today_Condition 폴더 안에 넣기
 
 ## 📌 라이브러리 설치 (생성한 폴더로 가서 설치)
 주소 예시 ) C:\Users\user\Downloads\Today_Condition\Today_Condition>
-* npm install expo-router
+* npm install expo-router (수정중)
 * npm install react-native-chart-kit
 * npm install @react-native-async-storage/async-storage
 * npm install expo-font
