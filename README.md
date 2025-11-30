@@ -11,7 +11,7 @@ https://nodejs.org/ko/download/
 ## npm 다운로드
 터미널창에서 npm install npx -g
 
-## 📌 프로젝트 생성
+## 📌 expo 다운로드 (굳이 안해도 됨)
 * npm install expo
 
 ## 📌 라이브러리 설치
