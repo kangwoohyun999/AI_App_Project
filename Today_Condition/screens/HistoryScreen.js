@@ -74,7 +74,7 @@ export default function HistoryScreen({ navigation }) {
             setSections([]);
           }}
         >
-          <Text style={styles.btnText}>전체 삭제</Text>
+          <Text style={[styles.btnText, { color: "#ffffff" }]}>전체 삭제</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
