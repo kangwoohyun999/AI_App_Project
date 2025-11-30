@@ -2,12 +2,26 @@ import React, { useEffect, useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { getMoodColors } from "../utils/storage";
 
+function emotionToCalendarColor(sentiment) {
+  if (sentiment === "positive") return "#4C8CFF"; // 파랑
+  if (sentiment === "negative") return "#FF5C5C"; // 빨강
+  if (sentiment === "neutral") return "#B26BFF"; // 보라
+  return "#333"; // 기본색(기록 없을 때)
+}
+
 export default function CalendarScreen({ navigation }) {
   const [moodColors, setMoodColors] = useState({});
 
   useEffect(() => {
     loadColors();
   }, []);
+  useEffect(() => {
+    const unsubscribe = navigation.addListener("focus", () => {
+      loadColors(); // 화면에 다시 들어올 때마다 새로 불러오기
+    });
+
+    return unsubscribe;
+  }, [navigation]);
 
   const loadColors = async () => {
     const data = await getMoodColors();
@@ -23,7 +37,8 @@ export default function CalendarScreen({ navigation }) {
       <View style={styles.grid}>
         {days.map((d) => {
           const dateKey = `2025-11-${String(d).padStart(2, "0")}`;
-          const bg = moodColors[dateKey] || "#333";
+          const mood = moodColors[dateKey];
+          const bg = emotionToCalendarColor(mood);
 
           return (
             <View key={d} style={[styles.day, { backgroundColor: bg }]}>

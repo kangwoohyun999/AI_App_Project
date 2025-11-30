@@ -35,6 +35,7 @@ export async function getEntriesByDate(dateStr) {
 export async function clearEntries() {
   try {
     await AsyncStorage.removeItem(KEY);
+    await AsyncStorage.removeItem("moodColors");
     return true;
   } catch (e) {
     console.error("clearEntries error", e);
@@ -78,12 +79,12 @@ export async function computeWordTimeSeries(days = 14) {
   return { dates, words, data };
 }
 // 날짜별 감정 색 저장
-export async function saveMoodColor(date, color) {
+export async function saveMoodColor(date, moodLabel) {
   try {
     const stored = await AsyncStorage.getItem("moodColors");
     const json = stored ? JSON.parse(stored) : {};
 
-    json[date] = color;
+    json[date] = moodLabel;
 
     await AsyncStorage.setItem("moodColors", JSON.stringify(json));
   } catch (e) {

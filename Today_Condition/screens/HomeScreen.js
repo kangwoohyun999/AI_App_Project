@@ -113,6 +113,7 @@ const styles = StyleSheet.create({
     bottom: 40,
     width: "100%",
     alignItems: "center",
+    gap: 14,
   },
   promptText: { color: "#fff", fontSize: 16, marginBottom: 10 },
   chatInputButton: {
@@ -123,11 +124,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   chatInputText: { color: "#fff", fontSize: 16 },
+
   calendarBtn: {
     marginTop: 20,
-    backgroundColor: "#6b5bff",
+    width: "90%", // ⭐ 추가 (채팅 버튼과 동일)
+    backgroundColor: "#2a2430",
     padding: 14,
-    borderRadius: 10,
+    borderRadius: 12,
     alignItems: "center",
   },
 });

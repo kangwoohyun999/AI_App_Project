@@ -48,8 +48,7 @@ export default function ChatScreen({ navigation }) {
 
     // ⭐ 오늘의 감정색 저장 기능 추가
     const today = formatDateISO(selectedDate);
-    const color = emotionToColor(sentiment.score);
-    await saveMoodColor(today, color);
+    await saveMoodColor(today, sentiment.label);
 
     const entry = {
       id: Date.now().toString(),
