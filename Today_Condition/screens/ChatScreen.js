@@ -12,6 +12,8 @@ import ChatBubble from "../components/ChatBubble";
 import { extractKeywordsWithWeights } from "../utils/keywordExtractor";
 import { estimateSentimentFromWeighted } from "../utils/sentiment";
 import { saveEntry, getEntriesByDate } from "../utils/storage";
+import { emotionToColor } from "../utils/emotionToColor";
+import { saveMoodColor } from "../utils/storage";
 
 function formatDateISO(d) {
   return d.toISOString().slice(0, 10);
@@ -39,17 +41,14 @@ export default function ChatScreen({ navigation }) {
   };
 
   const handleSend = async () => {
+    console.log("handleSend 실행됨, text:", text);
     if (!text.trim()) return;
     const { keywords, counts, weighted } = extractKeywordsWithWeights(text);
     const sentiment = estimateSentimentFromWeighted(weighted);
 
     // ⭐ 오늘의 감정색 저장 기능 추가
     const today = formatDateISO(selectedDate);
-
-    // sentiment 구조가 { label, score } 라고 가정
     const color = emotionToColor(sentiment.score);
-
-    // 저장
     await saveMoodColor(today, color);
 
     const entry = {
@@ -121,13 +120,14 @@ export default function ChatScreen({ navigation }) {
 
       <View style={styles.inputRow}>
         <TextInput
-          style={styles.input}
-          placeholder="오늘의 감정이나 일을 적어보세요."
+          style={[styles.input, { flex: 1 }]}
+          placeholder="내용을 입력하세요"
           placeholderTextColor="#aaa"
           value={text}
           onChangeText={setText}
           multiline
         />
+
         <TouchableOpacity style={styles.sendBtn} onPress={handleSend}>
           <Text style={{ color: "#fff" }}>전송</Text>
         </TouchableOpacity>
