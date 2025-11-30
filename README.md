@@ -12,20 +12,17 @@ https://nodejs.org/ko/download/
 터미널창에서 npm install npx -g
 
 ## 📌 프로젝트 생성
-* npx create-expo-app Today_Condition
-* Today_Condition/app 폴더 제거
-* 나머지 파일 Today_Condition 폴더 안에 넣기
+* npm install expo
 
-## 📌 라이브러리 설치 (생성한 폴더로 가서 설치)
-주소 예시 ) C:\Users\user\Downloads\Today_Condition\Today_Condition>
-* npm install expo-router
+## 📌 라이브러리 설치
 * npm install react-native-chart-kit
 * npm install @react-native-async-storage/async-storage
-* npm install expo-font
-* npm install expo-linear-gradient
-* npm install victory
+* npx expo install expo-font
 * npx expo install react-native-svg
-
+* npx expo install expo-linear-gradient
+* npm install victory
+* npm install victory-native
+* npx expo install react-native-svg
 
 ## 📌 Expo 실행
 * npx expo start
