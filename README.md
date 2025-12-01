@@ -15,7 +15,14 @@ https://nodejs.org/ko/download/
 * npm install expo
 
 ## ✅ 버전 오류 해결 방법
+### 1번
 * npm uninstall @expo/webpack-config
+### 2번
+* @expo/webpack-config@19.0.3
+* npm install @expo/webpack-config@19.0.3 --save-dev
+### ⚠️ 절대로 하면 안 되는 것
+* npm install --force
+* npm install --legacy-peer-deps
 
 ## 📌 expo fix
 * npm audit fix
