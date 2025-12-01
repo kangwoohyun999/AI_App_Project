@@ -14,6 +14,10 @@ https://nodejs.org/ko/download/
 ## 📌 expo 다운로드 (굳이 안해도 됨)
 * npm install expo
 
+## 📌 expo fix
+* npm audit fix
+* npm audit fix --force
+
 ## 📌 라이브러리 설치
 * npm install react-native-chart-kit
 * npm install @react-native-async-storage/async-storage
