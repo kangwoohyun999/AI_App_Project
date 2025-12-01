@@ -38,44 +38,50 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>누적 상태</Text>
-      <PieChartComponent positive={positiveRatio} negative={negativeRatio} />
-      <Text style={styles.ratioText}>
-        부정 : {Math.round(negativeRatio * 100)}% , 긍정 :{" "}
-        {Math.round(positiveRatio * 100)}%
-      </Text>
+      {/* 상단: 제목, 차트, 카드 버튼 */}
+      <View style={styles.topSection}>
+        <Text style={styles.title}>누적 상태</Text>
 
-      <View style={styles.buttonRow}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate("Graph")}
-        >
-          <Text style={styles.buttonText}>누적 상태 그래프</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate("History")}
-        >
-          <Text style={styles.buttonText}>지난 내용 보기</Text>
-        </TouchableOpacity>
+        <PieChartComponent positive={positiveRatio} negative={negativeRatio} />
+
+        <Text style={styles.ratioText}>
+          부정 : {Math.round(negativeRatio * 100)}% , 긍정 :{" "}
+          {Math.round(positiveRatio * 100)}%
+        </Text>
+
+        <View style={styles.buttonRow}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate("그래프")}
+          >
+            <Text style={styles.buttonText}>누적 상태 그래프</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate("기록")}
+          >
+            <Text style={styles.buttonText}>지난 내용 보기</Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
-      <View style={styles.chatPrompt}>
+      {/* 하단: 안내 문구 + 캘린더 / 채팅 버튼 */}
+      <View style={styles.bottomSection}>
         <Text style={styles.promptText}>
           안녕하세요. 오늘은 어떤 하루였나요?
         </Text>
+
         <TouchableOpacity
           style={styles.calendarBtn}
-          onPress={() => navigation.navigate("Calendar")}
+          onPress={() => navigation.navigate("캘린더")}
         >
-          <Text style={{ color: "#fff", fontSize: 18 }}>
-            📅 감정 캘린더 보기
-          </Text>
+          <Text style={styles.calendarBtnText}>📅 감정 캘린더 보기</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.chatInputButton}
-          onPress={() => navigation.navigate("Chat")}
+          onPress={() => navigation.navigate("챗봇")}
         >
           <Text style={styles.chatInputText}>눌러서 채팅하기</Text>
         </TouchableOpacity>
@@ -85,14 +91,26 @@ export default function HomeScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  // 전체 레이아웃
   container: {
     flex: 1,
     backgroundColor: "#f5f5f5",
-    padding: 20,
-    alignItems: "center",
+    paddingHorizontal: 20,
+    paddingTop: 10,
   },
 
-  // 타이틀
+  topSection: {
+    flex: 1,
+    alignItems: "center",
+    paddingTop: 10,
+  },
+
+  bottomSection: {
+    paddingBottom: 20,
+    alignItems: "center",
+    gap: 14,
+  },
+
   title: {
     color: "#333",
     fontSize: 28,
@@ -100,14 +118,12 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 
-  // 긍정/부정 비율 텍스트
   ratioText: {
     color: "#555",
     fontSize: 18,
     marginVertical: 12,
   },
 
-  // 버튼 2개 가로 배열
   buttonRow: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -115,7 +131,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 
-  // 흰색 카드 버튼
   button: {
     flex: 1,
     backgroundColor: "#ffffff",
@@ -136,22 +151,12 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
 
-  // 하단 채팅/캘린더 영역
-  chatPrompt: {
-    position: "absolute",
-    bottom: 40,
-    width: "100%",
-    alignItems: "center",
-    gap: 14,
-  },
-
   promptText: {
     color: "#444",
     fontSize: 16,
-    marginBottom: 6,
+    marginBottom: 4,
   },
 
-  // 메인 블루 버튼
   calendarBtn: {
     width: "90%",
     backgroundColor: "#4C6EF5",
@@ -164,7 +169,11 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 3 },
   },
 
-  // 채팅 버튼 (화이트 카드 느낌)
+  calendarBtnText: {
+    color: "#fff",
+    fontSize: 18,
+  },
+
   chatInputButton: {
     width: "90%",
     backgroundColor: "#ffffff",
