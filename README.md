@@ -14,6 +14,20 @@ https://nodejs.org/ko/download/
 ## 📌 expo 다운로드 (굳이 안해도 됨)
 * npm install expo
 
+## ✅ 버전 오류 해결 방법
+### 1번
+* npm uninstall @expo/webpack-config
+### 2번
+* @expo/webpack-config@19.0.3
+* npm install @expo/webpack-config@19.0.3 --save-dev
+### ⚠️ 절대로 하면 안 되는 것
+* npm install --force
+* npm install --legacy-peer-deps
+
+## 📌 expo fix
+* npm audit fix
+* npm audit fix --force
+
 ## 📌 라이브러리 설치
 * npm install react-native-chart-kit
 * npm install @react-native-async-storage/async-storage
