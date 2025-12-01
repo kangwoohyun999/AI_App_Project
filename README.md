@@ -14,6 +14,9 @@ https://nodejs.org/ko/download/
 ## 📌 expo 다운로드 (굳이 안해도 됨)
 * npm install expo
 
+## ✅ 버전 오류 해결 방법
+* npm uninstall @expo/webpack-config
+
 ## 📌 expo fix
 * npm audit fix
 * npm audit fix --force
