@@ -11,7 +11,7 @@ https://nodejs.org/ko/download/
 ## npm 다운로드
 터미널창에서 npm install npx -g
 
-## 📌 expo 다운로드 (굳이 안해도 됨)
+## 📌 expo 다운로드
 * npm install expo
 
 ## ✅ 버전 오류 해결 방법
