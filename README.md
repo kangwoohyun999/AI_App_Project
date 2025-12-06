@@ -41,6 +41,9 @@ https://nodejs.org/ko/download/
 ## 📌 Expo 실행
 * npx expo start
 
+## 📌 iOS라면 설치 (실험중)
+* npx pod-install
+
 ## 🔧 설치/주의사항
 * react-native-chart-kit와 react-native-svg, @react-native-async-storage/async-storage가 필요합니다. (이전 package.json에 포함)
 * 사전(WORD_DICT)은 utils/wordDictionary.js에서 조절하세요. 프로젝트 초기에는 적은 수의 키워드만 넣고 테스트 후 확장 권장.
