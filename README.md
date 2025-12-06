@@ -26,7 +26,7 @@ https://nodejs.org/ko/download/
 
 ## 📌 라이브러리 설치
 * npm install
-* expo install expo-secure-store
+* npm install expo-secure-store
 * expo install firebase
 * npm install styled-components
 ---
