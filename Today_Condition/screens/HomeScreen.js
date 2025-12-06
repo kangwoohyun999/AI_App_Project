@@ -65,7 +65,29 @@ export default function HomeScreen({ navigation }) {
           </TouchableOpacity>
         </View>
       </View>
+      {/* ✨ 음악 추천 카드 섹션 */}
+      <View style={styles.musicSection}>
+        <TouchableOpacity
+          style={styles.musicCard}
+          onPress={() => navigation.navigate("음악추천", { mood: "bad" })}
+        >
+          <Text style={styles.musicCardText}>😞 기분 안좋은 날\n노래 추천</Text>
+        </TouchableOpacity>
 
+        <TouchableOpacity
+          style={styles.musicCard}
+          onPress={() => navigation.navigate("음악추천", { mood: "good" })}
+        >
+          <Text style={styles.musicCardText}>😊 기분 좋은 날\n노래 추천</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.musicCard}
+          onPress={() => navigation.navigate("추천목록")}
+        >
+          <Text style={styles.musicCardText}>🎧 추천받은\n노래 목록</Text>
+        </TouchableOpacity>
+      </View>
       {/* 하단: 안내 문구 + 캘린더 / 채팅 버튼 */}
       <View style={styles.bottomSection}>
         <Text style={styles.promptText}>
@@ -190,5 +212,32 @@ const styles = StyleSheet.create({
     color: "#333",
     fontSize: 16,
     fontWeight: "600",
+  },
+  musicSection: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingVertical: 20,
+  },
+
+  musicCard: {
+    flex: 1,
+    backgroundColor: "#ffffff",
+    marginHorizontal: 5,
+    padding: 20,
+    borderRadius: 14,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 3 },
+  },
+
+  musicCardText: {
+    color: "#333",
+    fontSize: 15,
+    fontWeight: "600",
+    textAlign: "center",
   },
 });
