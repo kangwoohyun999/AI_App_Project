@@ -37,7 +37,6 @@ https://nodejs.org/ko/download/
 * npm install victory
 * npm install victory-native
 * npx expo install react-native-svg
-* npx expo install expo-image-picker
 
 ## 📌 Expo 실행
 * npx expo start
