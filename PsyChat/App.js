@@ -2,7 +2,7 @@
 import React from "react";
 import { ThemeProvider } from "styled-components/native";
 import { UserProvider, ProgressProvider } from "./contexts";
-import Navigation from "./navigations";
+import Navigation from "./navigation";
 import theme from "./theme";
 
 export default function App() {

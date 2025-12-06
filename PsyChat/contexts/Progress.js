@@ -1,11 +1,12 @@
+// src/contexts/Progress.js
 import React, { createContext, useState } from 'react';
 
-const ProgressContext = createContext({
+export const ProgressContext = createContext({
   inProgress: false,
   spinner: {
     start: () => {},
-    stop: () => {}
-  }
+    stop: () => {},
+  },
 });
 
 export const ProgressProvider = ({ children }) => {
@@ -13,7 +14,7 @@ export const ProgressProvider = ({ children }) => {
 
   const spinner = {
     start: () => setInProgress(true),
-    stop: () => setInProgress(false)
+    stop: () => setInProgress(false),
   };
 
   return (
@@ -22,5 +23,3 @@ export const ProgressProvider = ({ children }) => {
     </ProgressContext.Provider>
   );
 };
-
-export default ProgressContext;
