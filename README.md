@@ -11,7 +11,7 @@ https://nodejs.org/ko/download/
 ## npm 다운로드
 터미널창에서 npm install npx -g
 
-## 📌 expo 다운로드 (굳이 안해도 됨)
+## 📌 expo 다운로드
 * npm install expo
 
 ## ✅ 버전 오류 해결 방법
@@ -40,6 +40,9 @@ https://nodejs.org/ko/download/
 
 ## 📌 Expo 실행
 * npx expo start
+
+## 📌 iOS라면 설치 (실험중)
+* npx pod-install
 
 ## 🔧 설치/주의사항
 * react-native-chart-kit와 react-native-svg, @react-native-async-storage/async-storage가 필요합니다. (이전 package.json에 포함)
