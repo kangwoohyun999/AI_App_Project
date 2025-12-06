@@ -29,6 +29,7 @@ https://nodejs.org/ko/download/
 * npm install expo-secure-store
 * npm install firebase
 * npm install styled-components
+* npx expo install react-native-web
 ---
 * npm install react-native-chart-kit
 * npm install @react-native-async-storage/async-storage
