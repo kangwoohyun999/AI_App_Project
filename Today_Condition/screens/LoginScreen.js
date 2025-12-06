@@ -24,9 +24,10 @@ const LoginScreen = ({ navigation }) => {
       const user = await login({ email, password });
       Alert.alert("로그인 성공", user.email);
 
+      // 🔥 로그인 성공 → 탭 네비(MainTabs)로 이동
       navigation.reset({
         index: 0,
-        routes: [{ name: "Home" }],
+        routes: [{ name: "MainTabs" }],
       });
     } catch (e) {
       Alert.alert("로그인 실패", e.message);
@@ -71,6 +72,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 12,
     marginBottom: 12,
+    fontSize: 16,
   },
   button: {
     backgroundColor: "#4a90e2",
@@ -82,8 +84,8 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     fontWeight: "bold",
+    fontSize: 16,
   },
 });
 
 export default LoginScreen;
-
