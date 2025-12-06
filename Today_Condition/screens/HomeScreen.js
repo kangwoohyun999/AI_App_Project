@@ -71,21 +71,21 @@ export default function HomeScreen({ navigation }) {
           style={styles.musicCard}
           onPress={() => navigation.navigate("음악추천", { mood: "bad" })}
         >
-          <Text style={styles.musicCardText}>😞 기분 안좋은 날\n노래 추천</Text>
+          <Text style={styles.musicCardText}>😞 기분 안좋은 날 노래 추천</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.musicCard}
           onPress={() => navigation.navigate("음악추천", { mood: "good" })}
         >
-          <Text style={styles.musicCardText}>😊 기분 좋은 날\n노래 추천</Text>
+          <Text style={styles.musicCardText}>😊 기분 좋은 날 노래 추천</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.musicCard}
           onPress={() => navigation.navigate("추천목록")}
         >
-          <Text style={styles.musicCardText}>🎧 추천받은\n노래 목록</Text>
+          <Text style={styles.musicCardText}>🎧 추천받은 노래 목록</Text>
         </TouchableOpacity>
       </View>
       {/* 하단: 안내 문구 + 캘린더 / 채팅 버튼 */}

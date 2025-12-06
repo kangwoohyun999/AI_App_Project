@@ -16,18 +16,15 @@ export default function MainStack() {
       initialRouteName="Home"
       screenOptions={{ headerShown: false }}
     >
-<<<<<<< Updated upstream
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Chat" component={ChatScreen} />
       <Stack.Screen name="History" component={HistoryScreen} />
       <Stack.Screen name="Graph" component={GraphScreen} />
       <Stack.Screen name="Calendar" component={CalendarScreen} />
-=======
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="MainTabs" component={MainTabs} />
       <Stack.Screen name="음악추천" component={MusicRecommend} />
       <Stack.Screen name="추천목록" component={RecommendList} />
->>>>>>> Stashed changes
     </Stack.Navigator>
   );
 }
