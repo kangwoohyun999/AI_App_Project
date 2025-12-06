@@ -25,6 +25,11 @@ https://nodejs.org/ko/download/
 * npm audit fix --force
 
 ## 📌 라이브러리 설치
+npm install
+expo install expo-secure-store
+expo install firebase
+npm install styled-components
+
 * npm install react-native-chart-kit
 * npm install @react-native-async-storage/async-storage
 * npx expo install expo-font
