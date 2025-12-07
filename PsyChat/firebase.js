@@ -1,4 +1,4 @@
-// firebase/config.js
+// firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
@@ -6,13 +6,13 @@ import { getFirestore } from "firebase/firestore";
 // Firebase 프로젝트 설정
 // ⚠️ 실제 값으로 교체하세요!
 const firebaseConfig = {
-  apiKey: "AIzaSyBnqcHmUuTyMM08BFDWBfjOZl6O3sbZVhg",
-  authDomain: "psych-beacd.firebaseapp.com",
-  projectId: "psych-beacd",
-  storageBucket: "psych-beacd.firebasestorage.app",
-  messagingSenderId: "163874017534",
-  appId: "1:163874017534:web:e7c8c174c7e5765a1df5af",
-  measurementId: "G-C4Q2CL2L94"
+  apiKey: "AIzaSyCfmQU5NBRlB_oTDPAQukEt348cWQy9v9U",
+  authDomain: "aiappproject-b3a30.firebaseapp.com",
+  projectId: "aiappproject-b3a30",
+  storageBucket: "aiappproject-b3a30.firebasestorage.app",
+  messagingSenderId: "243555863658",
+  appId: "1:243555863658:web:1edc711e21595fcdf84e13",
+  measurementId: "G-DRZ26J9RG4"
 };
 
 // Firebase 초기화
