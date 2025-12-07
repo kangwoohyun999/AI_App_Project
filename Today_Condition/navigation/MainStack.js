@@ -71,8 +71,6 @@ export default function MainStack() {
       <Stack.Screen name="MainTabs" component={MainTabs} />
       <Stack.Screen name="음악추천" component={MusicRecommend} />
       <Stack.Screen name="추천목록" component={RecommendList} />
-      <Stack.Screen name="Login" component={LoginScreen} />
-      <Stack.Screen name="MainTabs" component={MainTabs} />
     </Stack.Navigator>
   );
 }
