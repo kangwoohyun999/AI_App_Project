@@ -25,6 +25,7 @@ https://nodejs.org/ko/download/
 * npm audit fix --force
 
 ## 📌 라이브러리 설치
+* npx expo install @expo/webpack-config@^18.0.1
 * npm install expo@~48.0.0 react@18.2.0 react-native@0.71.8 react-dom@18.2.0 react-native-web@~0.18.10
 * npm install @react-navigation/native@6.1.6 @react-navigation/stack@^6.3.16 @react-navigation/bottom-tabs@6.5.7 react-native-gesture-handler@~2.9.0 react-native-safe-area-context@4.5.0 react-native-screens@~3.20.0
 * npm install firebase@^9.23.0 @react-native-async-storage/async-storage@1.17.11
