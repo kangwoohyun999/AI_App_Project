@@ -1,3 +1,4 @@
+// App.js
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -11,6 +12,8 @@ import CalendarScreen from "./screens/CalendarScreen";
 import HistoryScreen from "./screens/HistoryScreen";
 
 const Stack = createStackNavigator();
+
+import MainStack from "./navigation/MainStack";
 
 export default function App() {
   return (

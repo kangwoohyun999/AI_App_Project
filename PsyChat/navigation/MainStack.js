@@ -14,7 +14,7 @@ import CalendarScreen from "../screens/CalendarScreen";
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-// 🔹 로그인 후에 사용할 하단 탭 네비게이터
+// 🔹 로그인 이후에 쓰는 탭 네비게이터 (예전 App.js 내용 그대로)
 function MainTabs() {
   return (
     <Tab.Navigator
@@ -53,7 +53,7 @@ function MainTabs() {
   );
 }
 
-// 🔹 전체 네비게이션: [Login] → [MainTabs]
+// 🔹 전체 앱: [Login] → [MainTabs]
 export default function MainStack() {
   return (
     <Stack.Navigator
