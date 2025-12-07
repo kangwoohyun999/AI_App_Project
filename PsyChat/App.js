@@ -5,7 +5,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import LoginScreen from "./screens/LoginScreen";
 import HomeScreen from "./screens/HomeScreen";
-// 누락된 화면들을 import 해주세요
 import GraphScreen from "./screens/GraphScreen";
 import ChatScreen from "./screens/ChatScreen";
 import CalendarScreen from "./screens/CalendarScreen";
