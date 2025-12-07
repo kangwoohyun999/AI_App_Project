@@ -4,6 +4,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import LoginScreen from "./screens/LoginScreen";
 import HomeScreen from "./screens/HomeScreen";
+// 누락된 화면들을 import 해주세요
+import GraphScreen from "./screens/GraphScreen";
+import ChatScreen from "./screens/ChatScreen";
+import CalendarScreen from "./screens/CalendarScreen";
+import HistoryScreen from "./screens/HistoryScreen";
 
 const Stack = createStackNavigator();
 
@@ -16,6 +21,10 @@ export default function App() {
       >
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="캘린더" component={CalendarScreen} />
+        <Stack.Screen name="챗봇" component={ChatScreen} />
+        <Stack.Screen name="그래프" component={GraphScreen} />
+        <Stack.Screen name="기록" component={HistoryScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
