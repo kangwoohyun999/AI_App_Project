@@ -33,14 +33,6 @@ const LoginScreen = () => {
       return;
     }
 
-<<<<<<< Updated upstream
-      navigation.reset({
-        index: 0,
-        routes: [{ name: "Home" }],
-      });
-    } catch (e) {
-      Alert.alert("로그인 실패", e.message);
-=======
     setIsLoading(true);
 
     try {
@@ -123,7 +115,6 @@ const LoginScreen = () => {
       Alert.alert("회원가입 실패", errorMessage);
     } finally {
       setIsLoading(false);
->>>>>>> Stashed changes
     }
   };
 
@@ -220,19 +211,12 @@ const styles = StyleSheet.create({
   input: {
     backgroundColor: "white",
     borderWidth: 1,
-<<<<<<< Updated upstream
-    borderColor: "#ccc",
-    borderRadius: 8,
-    padding: 12,
-    marginBottom: 12,
-=======
     borderColor: "#E0E0E0",
     borderRadius: 12,
     padding: 16,
     marginBottom: 16,
     fontSize: 16,
     color: "#2C3E50",
->>>>>>> Stashed changes
   },
   button: {
     backgroundColor: "#4A90E2",
@@ -255,13 +239,6 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     fontWeight: "bold",
-<<<<<<< Updated upstream
-  },
-});
-
-export default LoginScreen;
-
-=======
     fontSize: 18,
   },
   switchButton: {
@@ -276,4 +253,3 @@ export default LoginScreen;
 });
 
 export default LoginScreen;
->>>>>>> Stashed changes
