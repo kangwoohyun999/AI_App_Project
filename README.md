@@ -1,9 +1,5 @@
 ## 인공지능앱개발 조별과제
 
-## 추천 주제 (바꿔도 됨)
-* AI 기반 캠퍼스 길찾기, POI 추천 앱
-* AI 뉴스 요약 & 키워드 추출 앱
-
 ## Node.js 다운로드
 https://nodejs.org/ko/download/
 접속 후 20.xx.xx 버전 선택 후 다운로드
@@ -29,14 +25,24 @@ https://nodejs.org/ko/download/
 * npm audit fix --force
 
 ## 📌 라이브러리 설치
-* npm install react-native-chart-kit
-* npm install @react-native-async-storage/async-storage
-* npx expo install expo-font
-* npx expo install react-native-svg
-* npx expo install expo-linear-gradient
-* npm install victory
-* npm install victory-native
-* npx expo install react-native-svg
+
+# 메인 의존성
+npm install expo@~48.0.0 react@18.2.0 react-native@0.71.8 react-dom@18.2.0 react-native-web@~0.18.10
+
+# Navigation
+npm install @react-navigation/native@6.1.6 @react-navigation/stack@^6.3.16 @react-navigation/bottom-tabs@6.5.7 react-native-gesture-handler@~2.9.0 react-native-safe-area-context@4.5.0 react-native-screens@~3.20.0
+
+# Firebase & Storage
+npm install firebase@^9.23.0 @react-native-async-storage/async-storage@1.17.11
+
+# Charts & UI
+npm install react-native-chart-kit@^6.12.0 react-native-svg@13.4.0 styled-components@^5.3.11
+
+# Expo 패키지
+npx expo install expo-status-bar@~1.4.4 expo-font@~11.1.1 expo-linear-gradient@~12.1.2 @expo/vector-icons
+
+# Dev
+npm install --save-dev @babel/core@^7.20.0
 
 ## 📌 Expo 실행
 * npx expo start
