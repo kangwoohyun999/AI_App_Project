@@ -1,7 +1,10 @@
-// firebase.js
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
+// firebase/config.js
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
+// Firebase 프로젝트 설정
+// ⚠️ 실제 값으로 교체하세요!
 const firebaseConfig = {
   apiKey: "AIzaSyBnqcHmUuTyMM08BFDWBfjOZl6O3sbZVhg",
   authDomain: "psych-beacd.firebaseapp.com",
@@ -12,20 +15,11 @@ const firebaseConfig = {
   measurementId: "G-C4Q2CL2L94"
 };
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+// Firebase 초기화
+const app = initializeApp(firebaseConfig);
 
-const auth = firebase.auth();
+// 인증 및 Firestore 인스턴스
+export const auth = getAuth(app);
+export const db = getFirestore(app);
 
-export const login = async ({ email, password }) => {
-  const { user } = await auth.signInWithEmailAndPassword(email, password);
-  return user;
-};
-
-export const signup = async ({ email, password }) => {
-  const { user } = await auth.createUserWithEmailAndPassword(email, password);
-  return user;
-};
-
-export { auth };
+export default app;
