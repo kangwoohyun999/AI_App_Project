@@ -123,7 +123,9 @@ export default function GraphScreen({ navigation }) {
 
         <View style={styles.statCard}>
           <Ionicons name="happy" size={32} color={SENTIMENT_COLORS.positive} />
-          <Text style={[styles.statValue, { color: SENTIMENT_COLORS.positive }]}>
+          <Text
+            style={[styles.statValue, { color: SENTIMENT_COLORS.positive }]}
+          >
             {Math.round(positiveRatio)}%
           </Text>
           <Text style={styles.statLabel}>긍정</Text>
@@ -131,15 +133,17 @@ export default function GraphScreen({ navigation }) {
 
         <View style={styles.statCard}>
           <Ionicons name="sad" size={32} color={SENTIMENT_COLORS.negative} />
-          <Text style={[styles.statValue, { color: SENTIMENT_COLORS.negative }]}>
+          <Text
+            style={[styles.statValue, { color: SENTIMENT_COLORS.negative }]}
+          >
             {Math.round(negativeRatio)}%
           </Text>
           <Text style={styles.statLabel}>부정</Text>
         </View>
 
         <View style={styles.statCard}>
-          <Ionicons name="trending-up" size={32} color="#10B981" />
-          <Text style={[styles.statValue, { color: "#10B981" }]}>
+          <Ionicons name="trending-up" size={32} color="#7F8C8D" />
+          <Text style={[styles.statValue, { color: "#7F8C8D" }]}>
             {stats.avgScore ? stats.avgScore.toFixed(2) : "0.00"}
           </Text>
           <Text style={styles.statLabel}>평균 점수</Text>
@@ -237,7 +241,11 @@ export default function GraphScreen({ navigation }) {
   };
 
   const renderTopKeywords = () => {
-    if (!stats || !stats.topKeywords || Object.keys(stats.topKeywords).length === 0) {
+    if (
+      !stats ||
+      !stats.topKeywords ||
+      Object.keys(stats.topKeywords).length === 0
+    ) {
       return null;
     }
 
