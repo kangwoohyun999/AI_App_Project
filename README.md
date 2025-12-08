@@ -33,6 +33,8 @@ https://nodejs.org/ko/download/
 * npm install victory
 * npm install victory-native
 * npx expo install react-native-svg
+### 웹
+* npx expo install @expo/webpack-config@^18.0.1
 
 ## 📌 Expo 실행
 * npx expo start
