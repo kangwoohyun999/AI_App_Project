@@ -37,11 +37,21 @@ https://nodejs.org/ko/download/
 ## 📌 Expo 실행
 * npx expo start
 
-## 🔧 설치/주의사항
-* react-native-chart-kit와 react-native-svg, @react-native-async-storage/async-storage가 필요합니다. (이전 package.json에 포함)
-* 사전(WORD_DICT)은 utils/wordDictionary.js에서 조절하세요. 프로젝트 초기에는 적은 수의 키워드만 넣고 테스트 후 확장 권장.
-* 감성 판단 문턱값(estimateSentimentFromWeighted)은 실사용 테스트 후 조정하세요.
-* OpenAI API 등 외부 서비스를 연동할 경우 서버사이드에서 API 키를 안전하게 관리하세요. 직접 클라이언트에 키를 넣지 마세요.
+## 🍎 iOS 설치 및 실행 가이드
+📋 사전 요구사항
+macOS에서 실행 시:
 
-## 발표
-ppt에 깃허브 링크 추가, 오픈AI 기능, 로그인 기능 추가, 서버 여는 방법 찾아서 시도하기
+macOS Catalina (10.15) 이상
+Xcode 14.0 이상
+CocoaPods 1.11 이상
+Node.js 16 이상
+
+Windows에서 실행 시:
+
+Expo Go 앱만 사용 가능 (시뮬레이터 불가)
+
+## 📌 ios 필수 라이브러리
+* npx pod-install ios
+* npm install react-native-reanimated@~2.14.4
+* npm install react-native-safe-area-context@4.5.0
+* npx expo install expo-build-properties
