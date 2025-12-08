@@ -55,3 +55,20 @@ Expo Go 앱만 사용 가능 (시뮬레이터 불가)
 * npm install react-native-reanimated@~2.14.4
 * npm install react-native-safe-area-context@4.5.0
 * npx expo install expo-build-properties
+
+## ios 오류 시 해결 방법
+### 1. 완전히 클린 설치
+* rm -rf node_modules
+* rm -rf .expo
+* rm -rf ios
+* rm package-lock.json
+* npm cache clean --force
+
+### 2. 재설치
+* npm install
+
+### 3. Metro 캐시 클리어하고 재시작
+* npx expo start -c
+
+### 4. iOS에서 실행
+* npx expo start --ios
